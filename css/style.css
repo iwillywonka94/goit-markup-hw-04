@@ -116,8 +116,27 @@ ul {
   margin-left: auto;
 }
 
+.contacts-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--secondary-text-color);
+}
+
+.contacts-link:hover .contacts-icon {
+  fill: var(--accent-color);
+}
+
+.contacts-icon {
+  margin-right: 10px;
+}
+
 .contacts-item {
-  margin-left: 50px;
+  margin-right: 30px;
+}
+
+.contacts-item:last-child {
+  margin-right: 0;
 }
 
 .contacts a {
@@ -142,7 +161,20 @@ ul {
 
 /* Hero-sect */
 .hero {
-  background-color: #2f303a;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+  height: 600px;
+  background-color: #212121;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../image/bgphoto.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -183,20 +215,37 @@ ul {
   display: flex;
 }
 
+.detail {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail:last-child {
+  margin-right: 0;
+}
+
+.item {
+  background: #f5f4fa;
+  border-radius: 4px;
+  height: 120px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-pic {
+  width: 70px;
+  height: 70px;
+}
+
 .pcaption {
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
-}
-
-.detail {
-  margin-right: 30px;
-}
-
-.detail:last-child {
-  margin-right: 0;
 }
 
 .detail > p {
@@ -253,6 +302,7 @@ ul {
 }
 
 .ourteam-employee {
+  background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -271,16 +321,90 @@ ul {
   color: var(--secondary-text-color);
   line-height: 1.18;
   text-align: center;
+  margin-bottom: 16px;
+}
+
+.ourteam-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ourteam-social {
+  margin-right: 10px;
+}
+
+.ourteam-social:last-child {
+  margin-right: 0;
+}
+
+.social-team-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+}
+
+.social-team-link:hover {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+/* ---------OUR CLIENT--------- */
+
+.our-client {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-client-item {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.our-client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+}
+
+.our-client-item:hover {
+  border-color: var(--accent-color);
+}
+
+.client-decor {
+  fill: #afb1b8;
+}
+
+.client-decor:hover .icon-decor {
+  fill: var(--accent-color);
 }
 
 /* Footer */
 .basement {
   background-color: #2f303a;
+  display: flex;
 }
 
 .footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.container-contact {
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -314,6 +438,52 @@ ul {
 .adress.office > a:hover,
 .adress.office > a:focus {
   color: var(--accent-color);
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+}
+
+.basement > .container {
+  display: flex;
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--primary-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-item {
+  margin-right: 10px;
+}
+
+.footer-social-item:last-child {
+  margin-right: 0;
+}
+
+.footer-social-link:hover {
+  background-color: var(--accent-color);
 }
 
 /* Portfolio */
@@ -368,6 +538,8 @@ ul {
 .fkey > button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* card */
@@ -392,6 +564,11 @@ ul {
 
 .card > img {
   display: block;
+}
+
+.card-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .allworks-text {
